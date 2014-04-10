@@ -1,0 +1,177 @@
+body {
+    font-family: 'Open Sans', "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+header.navbar-default {
+    opacity: 0.95;
+    background-color: #FFF;
+}
+
+#loginModal .otherLogin {
+    width: 49%;
+}
+.modal-header {
+    border-bottom-width: 0px;
+}
+#loginModal .modal-header h1 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #428BCA;
+}
+#registerModal .modal-header {
+    padding-bottom: 0px;
+}
+#registerModal .modal-header h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: #428BCA;
+}
+.WebIcon {
+    margin-top: 22px;
+    color: #CCC;
+    line-height: 0.6em;
+}
+.WebIcon span {
+    font-size: 0.5em;
+}
+
+#jumbo1 {
+    color: #FFF;
+    background-color: #FFF;
+    height: 650px;
+    padding-top: 200px;
+    background-image: url(../img/jumbo1.jpg);
+}
+#jumbo1 .help-block,
+#jumbo1 a {
+    color: #FFF;
+}
+#company-logo {
+    background-color: #FFF;
+    margin-top: -30px;
+}
+#company-logo img {
+    opacity: 0.5;
+    transition: opacity 0.25s ease-in;
+}
+#company-logo img:hover {
+    opacity: 1;
+}
+#info .tab-content {
+    padding-top: 20px;
+}
+#info .carousel-indicators {
+    bottom: -50px;
+}
+#info .carousel-indicators li {
+    border: #333;
+    background-color: #CCC;
+    border-radius: 0px;
+    height: 10px;
+    width: 30px;
+}
+#info .carousel-indicators li.active {
+    background-color: #333;
+}
+#carousel-job-hot,
+#carousel-job-new {
+    height: 600px;
+}
+#info {
+    margin-bottom: 100px;
+}
+#info .media {
+    padding: 5px 0;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    margin-top: -1px;
+}
+#info .media h4 small {
+    padding: 0 10px;
+}
+#info .media td {
+    padding: 2px 0;
+    vertical-align: middle;
+    border-top-width: 0px;
+}
+#info tbody td:nth-child(1) {
+    width: 15%;
+}
+#info tbody td:nth-child(2) {
+    width: 15%;
+}
+#info tbody td:nth-child(3) {
+    width: 30%;
+}
+#info tbody td:nth-child(4) {
+    width: 30%;
+}
+#info tbody td:nth-child(5) {
+    width: 10%;
+}
+#propaganda {
+    background-image: url(../img/jumbo2.jpg);
+    height: 600px;
+    color: #F1F1F1;
+}
+#propaganda h1 {
+    padding-bottom: 50px;
+}
+#propaganda p {
+    /*text-indent: 2em;*/
+    line-height: 150%;
+    padding-bottom: 50px;
+}
+#statics,
+#feedback {
+    margin-top: 150px;
+    padding-bottom: 150px;
+    color: #666;
+    border-bottom: 1px solid #CCC;
+}
+#statics p,
+#feedback p {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-size: 16px;
+}
+#statics .btn-group {
+    border-left: 1px solid #CCC;
+}
+#statics .btn-group:nth-child(1) {
+    border-left-width: 0px;
+}
+.statics-num {
+    font-size: 36px;
+    text-align: center;
+}
+.statics-num-name {
+    font-size: 16px;
+    text-align: center;
+}
+#feedback form input {
+    height: 42px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#feedback textarea {
+    resize: none;
+}
+#footer {
+    height: 460px;
+    background-color: #363c4c;
+}
+#footer .jumbotron {
+    background-image: url(../img/footerbg.jpg);
+    height: 400px;
+    margin: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #c8d2e1;
+}
+#footer .jumbotron h2 {
+    margin-bottom: 30px;
+}
+#footer .jumbotron p {
+    font-size: 16px;
+}

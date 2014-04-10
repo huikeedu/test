@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>知珠网</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <header class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">导航开关</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">知珠网</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav nav-tabs navbar-nav navbar-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">公司</a></li>
+                    <li><a href="#">论坛</a></li>
+                    <li><a href="#">我的简历</a></li>
+                    <li><a href="#">发布职位</a></li>
+                    <li>
+                        <button type="button" class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#loginModal">登录</button>
+                        <button type="button" class="btn btn-success navbar-btn" data-toggle="modal" data-target="#registerModal">注册</button>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </header>
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                    <h3 class="WebIcon text-center">
+                        知珠网<br>
+                        <span>ZZWEB.COM</span>
+                    </h3>
+                    <h1 class="text-center">
+                        登&nbsp;&nbsp;录
+                    </h1>
+                    
+                    <button type="button" class="btn btn-default btn-lg otherLogin">
+                        <span class="glyphicon glyphicon-glass"></span>&nbsp;微博登录
+                    </button>
+                    <button type="button" class="btn btn-default btn-lg otherLogin">
+                        <span class="glyphicon glyphicon-hdd"></span>&nbsp;QQ登录
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST" role="form">
+                        <legend class="sr-only">登录</legend>
+                        <div class="form-group">
+                            <label for="loginAccount" class="sr-only">账号</label>
+                            <input type="email" class="form-control" id="loginAccount" placeholder="请输入您的登录邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword" class="sr-only">密码</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="请输入您的密码">
+                        </div>
+                        <p class="text-center"><a href="">忘记登录密码？</a></p>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">立即登录</button>
+                        <p class="text-center">还没有账号？<a href="">创建一个新账号</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove"></span></button>
+                    <h3 class="WebIcon text-center">
+                        知珠网<br>
+                        <span>ZZWEB.COM</span>
+                    </h3>
+                    <h1 class="text-center">
+                        创建账户
+                    </h1>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="POST" role="form">
+                        <legend class="sr-only">注册</legend>
+                        <div class="form-group">
+                            <div class="btn-group btn-group-justified" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="register-option" id="personel">我想工作
+                                </label>
+                                <label class="btn btn-success">
+                                    <input type="radio" name="register-option" id="company">我想雇佣
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerAccount" class="sr-only">账号</label>
+                            <input type="email" class="form-control" id="registerAccount" placeholder="请输入您的注册邮箱">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword" class="sr-only">密码</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="请输入您的密码">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPassword" class="sr-only">重复密码</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="请再输入一次您的密码">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="">
+                                    <small class="text-center">我已阅读并且同意<a href="">《用户协议须知》</a></small>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">立即注册</button>
+                        <p class="text-center">我已经有账号了，<a href="">直接登录</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron" id="jumbo1">
+        <div class="container">
+            <div class="text-center">
+                <h1>
+                    招聘网站的领导者
+                </h1>
+
+                <p>
+                    <small>
+                        我们是一支强大的专业招聘团队，问题解决者和思想家
+                        <br>我们热衷于每一个项目，我们只提供结果！
+                    </small>
+
+                </p>
+            </div>
+            <form action="" method="POST" role="search" class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-6 col-md-offset-2">
+                        <label for="search" class="sr-only">搜索</label>
+                        <input type="search" class="form-control input-lg" id="search" placeholder="请输入职位名或关键词">
+                        <span class="help-block">
+                            热门搜索：
+                            <a href="">
+                                Java
+                            </a>
+                            、
+                            <a href="">
+                                PHP
+                            </a>
+                            、
+                            <a href="">
+                                Android
+                            </a>
+                            、
+                            <a href="">
+                                iOS
+                            </a>
+                            、
+                            <a href="">
+                                产品经理
+                            </a>
+                            、
+                            <a href="">
+                                UI设计
+                            </a>
+                            、
+                            <a href="">
+                                大数据
+                            </a>
+                        </span>
+
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">找工作</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="jumbotron" id="company-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <a href="">
+                        <img class="img-responsive" src="img/logo_03_01.jpg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <a href="">
+                        <img class="img-responsive" src="img/logo_03_02.jpg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <a href="">
+                        <img class="img-responsive" src="img/logo_03_03.jpg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <a href="">
+                        <img class="img-responsive" src="img/logo_03_04.jpg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <a href="">
+                        <img class="img-responsive" src="img/logo_03_05.jpg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <a href="">
+                        <img class="img-responsive" src="img/logo_03_06.jpg" alt="logo">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="info">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="nav nav-pills nav-justified">
+                    <li class="active">
+                        <a href="#job-hot" data-toggle="tab">
+                            <h4>
+                                <strong>热门职位</strong>
+                            </h4>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#job-new" data-toggle="tab">
+                            <h4>
+                                <strong>最新职位</strong>
+                            </h4>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="job-hot">
+                <div id="carousel-job-hot" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-job-hot" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-job-hot" data-slide-to="1"></li>
+                        <li data-target="#carousel-job-hot" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            Java工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [深圳]
+                                            </small>
+                                            <small>
+                                                2014-1-2&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-15K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：腾讯视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                深圳市罗湖口岸</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：1000-1500人</td>
+                                            <td>职位诱惑：构筑企鹅帝国！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            PHP工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-12-01&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：6K-15K</td>
+                                            <td>类型：兼职</td>
+                                            <td>公司名称：百度视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最大的视频汇聚源！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            iOS工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-09-16&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：小米科技</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区五道口5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：50-150人</td>
+                                            <td>职位诱惑：今天你抢到了么！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            .NET架构师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-11-12&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：50K-55K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：微软中国</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市西二旗52号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：10-15人</td>
+                                            <td>职位诱惑：具有竞争力的薪资待遇！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_03.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            UI设计
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [上海]
+                                            </small>
+                                            <small>
+                                                2012-12-26&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：20K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：阿里巴巴</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                上海市虹桥区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最好的前端团队！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_05.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            Java工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [深圳]
+                                            </small>
+                                            <small>
+                                                2014-1-2&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-15K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：腾讯视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                深圳市罗湖口岸</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：1000-1500人</td>
+                                            <td>职位诱惑：构筑企鹅帝国！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_04.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            PHP工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-12-01&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：6K-15K</td>
+                                            <td>类型：兼职</td>
+                                            <td>公司名称：百度视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最大的视频汇聚源！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            iOS工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-09-16&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：小米科技</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区五道口5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：50-150人</td>
+                                            <td>职位诱惑：今天你抢到了么！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            .NET架构师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-11-12&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：50K-55K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：微软中国</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市西二旗52号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：10-15人</td>
+                                            <td>职位诱惑：具有竞争力的薪资待遇！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_03.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            UI设计
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [上海]
+                                            </small>
+                                            <small>
+                                                2012-12-26&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：20K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：阿里巴巴</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                上海市虹桥区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最好的前端团队！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_05.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            Java工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [深圳]
+                                            </small>
+                                            <small>
+                                                2014-1-2&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-15K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：腾讯视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>深圳市罗湖口岸</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：1000-1500人</td>
+                                            <td>职位诱惑：构筑企鹅帝国！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_04.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            PHP工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-12-01&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：6K-15K</td>
+                                            <td>类型：兼职</td>
+                                            <td>公司名称：百度视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最大的视频汇聚源！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            iOS工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-09-16&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：小米科技</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区五道口5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：50-150人</td>
+                                            <td>职位诱惑：今天你抢到了么！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            .NET架构师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-11-12&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：50K-55K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：微软中国</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市西二旗52号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：10-15人</td>
+                                            <td>职位诱惑：具有竞争力的薪资待遇！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_03.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            UI设计
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [上海]
+                                            </small>
+                                            <small>
+                                                2012-12-26&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：20K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：阿里巴巴</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                上海市虹桥区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最好的前端团队！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="job-new">
+                <div id="carousel-job-new" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-job-new" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-job-new" data-slide-to="1"></li>
+                        <li data-target="#carousel-job-new" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            Java工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [深圳]
+                                            </small>
+                                            <small>
+                                                2014-1-2&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-15K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：腾讯视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                深圳市罗湖口岸</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：1000-1500人</td>
+                                            <td>职位诱惑：构筑企鹅帝国！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_04.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            PHP工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-12-01&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：6K-15K</td>
+                                            <td>类型：兼职</td>
+                                            <td>公司名称：百度视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最大的视频汇聚源！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            iOS工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-09-16&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：小米科技</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区五道口5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：50-150人</td>
+                                            <td>职位诱惑：今天你抢到了么！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            .NET架构师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-11-12&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：50K-55K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：微软中国</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市西二旗52号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：10-15人</td>
+                                            <td>职位诱惑：具有竞争力的薪资待遇！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_03.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            UI设计
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [上海]
+                                            </small>
+                                            <small>
+                                                2012-12-26&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：20K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：阿里巴巴</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                上海市虹桥区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最好的前端团队！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_05.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            Java工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [深圳]
+                                            </small>
+                                            <small>
+                                                2014-1-2&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-15K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：腾讯视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                深圳市罗湖口岸</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：1000-1500人</td>
+                                            <td>职位诱惑：构筑企鹅帝国！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_04.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            PHP工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-12-01&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：6K-15K</td>
+                                            <td>类型：兼职</td>
+                                            <td>公司名称：百度视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最大的视频汇聚源！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            iOS工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-09-16&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：小米科技</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区五道口5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：50-150人</td>
+                                            <td>职位诱惑：今天你抢到了么！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            .NET架构师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-11-12&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：50K-55K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：微软中国</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市西二旗52号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：10-15人</td>
+                                            <td>职位诱惑：具有竞争力的薪资待遇！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_03.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            UI设计
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [上海]
+                                            </small>
+                                            <small>
+                                                2012-12-26&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：20K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：阿里巴巴</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                上海市虹桥区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最好的前端团队！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_05.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            Java工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [深圳]
+                                            </small>
+                                            <small>
+                                                2014-1-2&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-15K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：腾讯视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>深圳市罗湖口岸</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：1000-1500人</td>
+                                            <td>职位诱惑：构筑企鹅帝国！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_04.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            PHP工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-12-01&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：6K-15K</td>
+                                            <td>类型：兼职</td>
+                                            <td>公司名称：百度视频</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最大的视频汇聚源！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_01.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            iOS工程师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-09-16&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：10K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：小米科技</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市海淀区五道口5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：50-150人</td>
+                                            <td>职位诱惑：今天你抢到了么！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_02.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            .NET架构师
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [北京]
+                                            </small>
+                                            <small>
+                                                2013-11-12&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：50K-55K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：微软中国</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                北京市西二旗52号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：10-15人</td>
+                                            <td>职位诱惑：具有竞争力的薪资待遇！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <a class="pull-left" href="#">
+                                    <img class="media-object" src="img/logo_03_03.jpg" alt="..." style="width:100px;height:100px;">
+                                </a>
+
+                                <div class="media-body">
+                                    <h4>
+                                        <a href="">
+                                            UI设计
+                                        </a>
+
+                                        <span>
+                                            <small>
+                                                [上海]
+                                            </small>
+                                            <small>
+                                                2012-12-26&nbsp;09:30发布
+                                            </small>
+                                        </span>
+                                    </h4>
+
+                                    <table class="table">
+                                        <tr>
+                                            <td>薪水：20K-25K</td>
+                                            <td>类型：全职</td>
+                                            <td>公司名称：阿里巴巴</td>
+                                            <td rowspan="2">
+                                                <span class="glyphicon glyphicon-map-marker">
+                                                </span>
+                                                上海市虹桥区中关村5号</td>
+                                            <td rowspan="2">
+                                                <button class="btn btn-primary">立即申请</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>阶段：成熟型</td>
+                                            <td>规模：100-150人</td>
+                                            <td>职位诱惑：中国最好的前端团队！</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron" id="propaganda">
+        <div class="container">
+            <div class="row col-md-7">
+                <h1>寻找最心仪的工作</h1>
+                <p>知珠网（隶属于北京知源慧科有限公司）是专注互联网职业机会的招聘网站，以众多优质互联网资源为依托，发布圈内招聘信息，为求职者提供人性化、个性化、专业化的信息服务，以让优质人才和优秀企业及时相遇为己任。
+                </p>
+                <div class="row col-md-5">
+                    <a class="btn btn-primary btn-block btn-lg">
+                        <strong>立即注册</strong>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="statics">
+        <h1 class="text-center">知珠网网站统计</h1>
+        <p class="text-center">在这里，我们试试提供网站的统计数据。我们已经帮助了这么多的企业和个人找到了各自的所需。
+            <br>望你也成为统计数据中的一员，找到自己心仪的工作
+        </p>
+        <div class="btn-group-justified">
+            <div class="btn-group">
+                <div class="statics-num">5,116</div>
+                <div class="statics-num-name">职位发布</div>
+            </div>
+            <div class="btn-group">
+                <div class="statics-num">31,180</div>
+                <div class="statics-num-name">简历投递</div>
+            </div>
+            <div class="btn-group">
+                <div class="statics-num">156</div>
+                <div class="statics-num-name">入驻企业</div>
+            </div>
+            <div class="btn-group">
+                <div class="statics-num">2,256</div>
+                <div class="statics-num-name">注册会员</div>
+            </div>
+            <div class="btn-group">
+                <div class="statics-num">156</div>
+                <div class="statics-num-name">聘用完成</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="feedback">
+        <h1 class="text-center">请留下您宝贵的意见</h1>
+        <p class="text-center">在这里，用户可以给我们留言。不断的完善我们，我们只有不断超越自己，才能走得更远。
+            <br>同时，请留下您的联系方式，以便我们与您能够及时地沟通。
+        </p>
+        <form action="" method="POST" role="form" class="col-md-8 col-md-offset-2">
+            <legend class="sr-only">反馈意见</legend>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="" class="sr-only">姓名</label>
+                        <input type="text" class="form-control" id="" placeholder="您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="sr-only">邮箱地址</label>
+                        <input type="text" class="form-control" id="" placeholder="您的邮箱地址">
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="sr-only">手机号码</label>
+                        <input type="text" class="form-control" id="" placeholder="您的手机号码">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="您的宝贵意见"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        <strong>提交</strong>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer id="footer">
+        <div class="jumbotron">
+            <div class="container">
+                <h2>联系我们</h2>
+                <p>地址：北京市海淀区大钟寺东路白塔庵5号院
+                    <br>3号楼308室，100098
+                </p>
+                <p>固话：86-010-8261-8888</p>
+                <p>手机：86-186-6666-8888</p>
+                <p>邮箱：
+                    <a href="mailto:huike@huike.com">huike@huike.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js">
+    </script>
+    <!-- Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js">
+    </script>
+</body>
+
+</html>
